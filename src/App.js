@@ -1,8 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import EventPlanForm from "./components/EventPlanners/EventPlanForm";
+import EventShow from "./components/EventPlanners/EventShow";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Weather</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<EventPlanForm />} />
+        <Route path="/eventshow" element={<EventShow />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
